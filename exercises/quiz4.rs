@@ -5,7 +5,16 @@
 
 // Write a macro that passes the quiz! No hints this time, you can do it!
 
-// I AM NOT DONE
+#[macro_use]
+macro_rules! my_macro {
+    ($val:expr) => {
+        if $val.starts_with("world!") {
+            String::from("Hello world!")
+        } else {
+            String::from("Hello goodbye!")
+        }
+    }
+}
 
 #[cfg(test)]
 mod tests {
